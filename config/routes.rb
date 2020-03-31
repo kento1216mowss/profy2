@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :groups, only: [:show, :edit, :update]
     resources :questions, only: [:create, :show]
     resources :answers, only: [:new, :create]
+    resources :answers, only: [:new, :create, :edit, :update]
 
   
 
