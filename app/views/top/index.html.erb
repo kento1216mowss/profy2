@@ -8,7 +8,7 @@
 
 <div class="posting_form top_content">
     <header class="posting_header">
-      <div class="posting_image icon_image" style="background-image: url(<%= rails_blob_path( current_user.image) %>);"></div>
+      <div class="posting_image icon_image" style="background-image: url(<%= rails_blob_path(current_user.image) %>);"></div>
       <div class="posting_user_info user_info">
         <%= current_user.name %>
       </div>
@@ -18,7 +18,8 @@
       <%= f.submit "質問する" %>
     <% end %>
   </div>
-    <%= render partial: "questions/question", collection: @questions %>
 
+  <%= render @feed_contents_resource %>
 
+  <%= paginate(@feed_contents) %>
 <% end %>

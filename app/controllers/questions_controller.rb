@@ -3,6 +3,8 @@ class QuestionsController < ApplicationController
     Question.create(create_params)
     redirect_to :root and return
   end
+
+  
   
   
   def show
